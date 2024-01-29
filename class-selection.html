@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Selection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUlfM7FDboiKoaSGOE8Yt8uLhUON2x_UqOjw&usqp=CAU') no-repeat center center fixed;
+            background-size: cover;
+            color: #ecf0f1;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #ecf0f1;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: linear-gradient(to bottom, #3498db, #2980b9);
+            color: #ecf0f1;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(to bottom, #2980b9, #3498db);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select Your Class or Exam</h1>
+
+    <form action="process-class-selection.php" method="post">
+        <label for="class">Choose your class or exam:</label>
+        <select id="class" name="class" required>
+            <option value="" disabled selected>Select your class or exam</option>
+            <option value="6">Class 6</option>
+            <option value="7">Class 7</option>
+            <option value="8">Class 8</option>
+            <option value="9">Class 9</option>
+            <option value="10">Class 10</option>
+            <option value="11">Class 11</option>
+            <option value="12">Class 12</option>
+            <option value="upsc">UPSC</option>
+            <option value="jee-mains">JEE Mains</option>
+            <option value="jee-advance">JEE Advance</option>
+            <option value="neet">NEET</option>
+            <option value="gate">GATE</option>
+        </select>
+
+        <button type="button" onclick="redirectToNewPage()">Submit</button>
+    </form>
+
+    <script>
+        function redirectToNewPage() {
+            var selectedClass = document.getElementById("class").value;
+            switch (selectedClass) {
+                case "6":
+                    window.location.href = "class-6-information.html";
+                    break;
+                case "7":
+                    window.location.href = "class-7-information.html";
+                    break;
+                case "8":
+                    window.location.href = "class-8-information.html";
+                    break;
+                case "9":
+                    window.location.href = "class-9-information.html";
+                    break;
+                case "10":
+                    window.location.href = "board-information.html";
+                    break;
+                case "11":
+                    window.location.href = "class-11-information.html";
+                    break;
+                case "12":
+                    window.location.href = "new-page-after-12th-class.html";
+                    break;
+                case "upsc":
+                    window.location.href = "upsc-information.html";
+                    break;
+                case "jee-mains":
+                    window.location.href = "jee-mains-information.html";
+                    break;
+                case "jee-advance":
+                    window.location.href = "jee-advance-information.html";
+                    break;
+                case "neet":
+                    window.location.href = "neet-information.html";
+                    break;
+                case "gate":
+                    window.location.href = "gate-information.html";
+                    break;
+                default:
+                    // Handle other classes/exams if needed
+            }
+        }
+    </script>
+
+</body>
+</html>

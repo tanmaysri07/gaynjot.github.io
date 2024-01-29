@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gayanजोत</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS55mJeZbHTsuuvbCtRNF_2bDchXv1YGKCHA&usqp=CAU" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIhc8ydDG4K6EuC4q1BCXBB6q62VBMVKW4iw&usqp=CAU') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            color: #ecf0f1;
+        }
+
+        h1 {
+            color: #ecf0f1;
+            margin-bottom: 20px;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+            position: relative;
+        }
+
+        h1 img {
+            max-height: 50px;
+            margin-right: 10px;
+        }
+
+        button {
+            background: linear-gradient(to bottom, #3498db, #2980b9);
+            color: #ecf0f1;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(to bottom, #2980b9, #3498db);
+        }
+
+        .explore-line {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .explore-line::before,
+        .explore-line::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ecf0f1;
+            margin: 0 10px;
+        }
+
+        .quote-box {
+            background-color: #000;
+            color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .quote-box p {
+            margin: 0;
+        }
+
+        h2, p, span {
+            color: #ecf0f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS55mJeZbHTsuuvbCtRNF_2bDchXv1YGKCHA&usqp=CAU" alt="gayanजोत Logo" style="max-height: 50px; margin-right: 10px;">Gayanजोत</h1>
+
+    <button onclick="redirectToClassSelection()">Explore More</button>
+
+    <div id="studyInfo" class="active">
+        <h2>click on the above button to get study material and exam information</h2>
+        <p></p>
+    </div>
+
+    <div class="quote-box">
+        <p>“Ultimately, education in its real sense is the pursuit of truth. It is an endless journey through knowledge and enlightenment.” - APJ Abdul Kalam</p>
+    </div>
+
+    <div class="explore-line">
+        <span>
+          
+          
+          Our goal is to create education and system in the education system </span>
+    </div>
+
+    <script>
+        function redirectToClassSelection() {
+            window.location.href = "class-selection.html";
+        }
+    </script>
+</body>
+
+</html>
